@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+header{
+    background: linear-gradient(to right,#a6ffa6, #17217c);
+    height: 170px;
+    width: 100%;
+    overflow: hidden;
+}
+
+header > img {
+    position: relative;
+    left: 1250px;
+    top: -280px;
+    height: 800px;
+}
+
+header > h1 {
+    font-size: 75px;
+    margin-top: 30px;
+    color: rgb(48, 48, 48);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main-title-01{
+    background-color: rgb(0, 0, 0);
+    background-image: url('./../images/custom_hockey_01.jpeg');
+    background-position: 0% 70%;
+    background-size: cover;
+    font-size: 40px;
+    height: 125px;
+    width: 100%;
+    margin: 8px auto;
+    padding-top: 78px;
+    color: rgb(255, 255, 255);
+}
+
+.main-title-02{
+    background-image: url('./../images/custom_hockey_02.jpg');
+    background-position: 0% 55%;
+}
+
+.main-title-03{
+    background-image: url('./../images/custom_hockey_03.jpg');
+    background-position: 0% 15%;
+}
+
+nav {
+    background: linear-gradient(to left,#353535, #ffffff);
+    margin-top: 4px;
+}
+
+nav > a {
+    position: relative;
+    display: inline-block;
+    left: 900px;
+    width: 250px;
+    height: 40px;
+    padding:0 10px 0 10px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav > a:hover  {
+    background-color: rgb(176, 176, 176);
+    color: black;
+}
+
+section article {
+    position: relative;
+    left: 50px;
+    width: 1180px;
+}
+
+section article > * {
+    margin: 10px 0 ;
+}
+
+section article > h4, section article > h3  {
+    font-size: 40px;
+}
+
+section article > p {
+    font-size: 35px;
+}
+
+figure > img {
+    display: none;
+}
+
+
+
