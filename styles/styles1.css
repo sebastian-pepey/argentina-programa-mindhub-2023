@@ -1,9 +1,19 @@
+:root {
+    --blanco: #FFFFFF;
+    --negro: #000000;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
+
+html {
+    overflow-y: scroll;
+}
+
 header{
     background-image: url('./../images/design1_image1.jpg');
     background-position: 0% 20%;
@@ -16,10 +26,10 @@ header{
 header > img {
     position: relative;
     top: 230px;
-    left: 1100px;
-    background-color: rgb(255, 255, 255);
+    left: 80%;
+    background-color: var(--blanco);
     height: 175px;
-    border: 1px solid black;
+    border: 1px solid var(--negro);
 }
 
 header > h1 {
@@ -27,13 +37,13 @@ header > h1 {
 }
 
 .main-title-01{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--negro);
     height: 50px;
     width: 80%;
     margin: 10px auto;
     text-align: center;
    padding: 10px;
-    color: rgb(255, 255, 255);
+    color: var(--blanco);
 }
 
 nav {
@@ -48,7 +58,7 @@ nav > a {
     height: 40px;
     padding-top: 8px;
     text-align: left;
-    color: rgb(0, 0, 0);
+    color: var(--negro);
 }
 
 .selected {
@@ -59,7 +69,7 @@ section article, .not-article {
     position: relative;
     top: 50px;
     left: 400px;
-    width: 1180px;
+    width: 60%;
 }
 
 section article > *, .not-article {
@@ -73,7 +83,7 @@ section article > p, .not-article {
 figure > img {
     width: 500px;
     position: absolute;
-    left: 1060px;
+    left: 55%;
     z-index: -1;
 }
 
