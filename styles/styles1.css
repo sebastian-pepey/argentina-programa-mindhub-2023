@@ -41,14 +41,14 @@ header > h1 {
     height: 30px;
     margin: 10px 30px 0 30px;
     text-align: center;
-
+    padding: 6px;
     color: var(--blanco);
 }
 
 nav {
    position: absolute;
-   top: 450px;
-   left: 180px;
+   top: 250px;
+   left: 10%;
 }
 
 nav > a {
@@ -66,9 +66,9 @@ nav > a {
 
 section article, .not-article {
     position: relative;
-    top: 50px;
-    left: 400px;
-    width: 60%;
+    top: 30px;
+    left: 30%;
+    width: 50%;
 }
 
 section article > *, .not-article {
