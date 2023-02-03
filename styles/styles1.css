@@ -3,7 +3,7 @@
     --negro: #000000;
 }
 
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,58 +12,50 @@
 
 html {
     overflow-y: scroll;
-    font-size: 62.5%;
 }
 
-p {
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 2rem;
-}
-
-header {
+header{
     background-image: url('./../images/design1_image1.jpg');
     background-position: 0% 20%;
-    background-size: cover;
-    height: 150px;
-    margin: 30px 30px 0 30px;
+    height: 350px;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
 }
 
 header > img {
-    position: absolute;
-    top: 150px;
-    right: 10%;
+    position: relative;
+    top: 230px;
+    left: 80%;
     background-color: var(--blanco);
-    height: 120px;
+    height: 175px;
     border: 1px solid var(--negro);
 }
 
 header > h1 {
-    font-size: 4rem;
+    font-size: 50px;
 }
 
 .main-title-01{
     background-color: var(--negro);
-    height: 40px;
-    margin: 10px 30px 0 30px;
+    height: 50px;
+    width: 80%;
+    margin: 10px auto;
     text-align: center;
-    padding: 6px;
+   padding: 10px;
     color: var(--blanco);
 }
 
 nav {
    position: absolute;
-   top: 250px;
-   left: 10%;
+   top: 450px;
+   left: 180px;
 }
 
 nav > a {
     display: block;
     width: 150px;
     height: 40px;
-    font-size: 1.5rem;
     padding-top: 8px;
     text-align: left;
     color: var(--negro);
@@ -75,9 +67,9 @@ nav > a {
 
 section article, .not-article {
     position: relative;
-    top: 30px;
-    left: 30%;
-    width: 50%;
+    top: 50px;
+    left: 400px;
+    width: 60%;
 }
 
 section article > *, .not-article {
@@ -89,10 +81,11 @@ section article > p, .not-article {
 }
 
 figure > img {
-    width: 30%;
+    width: 500px;
     position: absolute;
-    top: 300px;
-    right: 30px;
+    left: 55%;
     z-index: -1;
-    opacity: 0.5;
 }
+
+
+
