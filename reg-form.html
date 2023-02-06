@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./styles/styles3.css">
+        <title>Mighty Ducks Hockey League</title>
+    </head>
+    <body>
+        <header>
+            <h1>Mighty Ducks Hockey League</h1>
+            <img src="/images/Logo_Mighty_ducks-01.png" alt="mdhl_logo">
+        </header>
+        <nav>
+            <a href="/home.html">Home</a>
+            <a href="/aboutMDHL.html" class="selected">About MDHL</a>
+            <a href="/game-info.html">Game Info</a>
+            <a href="/rules.html">Rules</a>
+            <a href="/reg-form.html">Register</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+        <main>
+            <h3 class="main-title-01 main-title-02">Registration Form</h3>
+            <div id="form-container">
+                <form>
+                    <fieldset>
+                        <legend>Personal Data</legend>
+    
+                        <div class="col-2">
+                            <div class="field">
+                                <label for="first-name" class="label-text">Player's First Name</label>
+                                <input type="text" id="first-name">
+                            </div>
+
+                            <div class="field">
+                                <label for="last-name" class="label-text">Player's First Name</label>
+                                <input type="text" id="last-name">
+                            </div>
+                        </div>
+    
+                        <div class="col-1">
+                            <div class="field">
+                                <label for="str-addr" class="label-text">Street Address</label>
+                                <input type="text" id="str-addr">
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+
+                            <div class="field">
+                                <label for="city" class="label-text">City</label>
+                                <input type="text" id="city">
+                            </div>
+
+                            <div class="field">
+                                <label for="zip-code" class="label-text">Zip Code</label>
+                                <input type="number" id="zip-code">
+                            </div>
+
+                        </div>
+    
+                        <div class="col-2">
+
+                            <div class="field">
+                                <label for="birth-date" class="label-text">Birth Date (mm/dd/yyyy)</label>
+                                <input type="date" id="birth-date">
+                            </div>
+                            
+                            <div class="field">
+                                <p class="label-text">Gender</p>
+                                <label for="female">Female</label>
+                                <input type="radio" id="female" name="gender">
+    
+                                <label for="male">Male</label>
+                                <input type="radio" id="male" name="gender">
+                            </div>  
+                        </div>
+    
+                        <div class="col-1">
+                            <div class="field">
+                                <p class="label-text">Grade</p>
+
+                                <input type="radio" id="pre-school" name="grade">
+                                <label for="pre-school">Pre-School</label>
+        
+                                <input type="radio" id="first-grade" name="grade">
+                                <label for="first-grade">1<span class="superscript">st</span></label>
+        
+                                <input type="radio" id="second-grade" name="grade">
+                                <label for="second-grade">2<span class="superscript">nd</span></label>
+        
+                                <input type="radio" id="third-grade" name="grade">
+                                <label for="third-grade">3<span class="superscript">rd</span></label>
+        
+                                <input type="radio" id="fourth-grade" name="grade">
+                                <label for="fourth-grade">4<span class="superscript">th</span></label>
+        
+                                <input type="radio" id="fifth-grade" name="grade">
+                                <label for="fifth-grade">5<span class="superscript">th</span></label>
+                                
+                            </div>
+                        </div>
+                    </fieldset>
+    
+                    <fieldset>
+                        <legend>Closest School</legend>
+
+                        <div class="col-1">
+                            <div class="field">
+                                <p class="label-text">Which elementary school do you live near?</p>
+                                <div>
+                                    <div>
+                                        <input type="radio" id="AJ-Katzenmaier" name="school">
+                                        <label for="first-grade">AJ Katzenmaier</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" id="AJ-Katzenmaier" name="school">
+                                        <label for="greenbay">Greenbay</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" id="Howard-A-Yeager" name="school">
+                                        <label for="Howard-A-Yeager">Howard A Yeager</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" id="Marjorie-P-Hart" name="school">
+                                        <label for="Marjorie-P-Hart">Marjorie P Hart</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" id="North-Elementary" name="school">
+                                        <label for="North-Elementary">North Elementary</label>
+                                    </div>
+                
+                                    <div>
+                                        <input type="radio" id="South-Elementary" name="school">
+                                        <label for="South-Elementary">South Elementary</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+    
+                    <fieldset>
+                        <legend>Position</legend>
+
+                        <div class="col-1">
+                            <div class="field">
+                                <p class="label-text">What position(s) do you normally play? (Check all that apply)</p>
+
+                                <div>
+                                    <div>
+                                        <input type="checkbox" id="forward" name="position">
+                                        <label for="forward">Forward</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="checkbox" id="defense" name="position">
+                                        <label for="defense">Defense</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="checkbox" id="midfield" name="position">
+                                        <label for="midfield">Midfield</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="checkbox" id="goalkeeper" name="position">
+                                        <label for="goalkeeper">Goalkeeper</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </fieldset>
+    
+                    <fieldset>
+                        <legend>Uniform Size</legend>
+
+                        <div class="col-1">
+                            <div class="field">
+                                <div>
+                                    <div>
+                                        <input type="radio" id="Youth-Small" name="size">
+                                        <label for="Youth-Small">Youth Small</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" id="Youth-Medium" name="size">
+                                        <label for="Youth-Medium">Youth Medium</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" id="Youth-Large" name="size">
+                                        <label for="Youth-Large">Youth Large</label>
+                                    </div>
+            
+                                    <div>
+                                        <input type="radio" id="Small" name="size">
+                                        <label for="Small">Small</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" id="Medium" name="size">
+                                        <label for="Medium">Medium</label>
+                                    </div>
+            
+                                    <div>
+                                        <input type="radio" id="Large" name="size">
+                                        <label for="Large">Large</label>
+                                    </div>
+            
+                                    <div>
+                                        <input type="radio" id="Extra-Large" name="size">
+                                        <label for="Extra-Large">Extra Large</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+    
+                    <input type="checkbox" id="conditions-readed">
+
+                    <label for="conditions-readed">
+                        I have readed the
+                        <a id="show-conditions" href="#hidden-conditions">Conditions<span>.
+
+                        <div id="hidden-conditions">
+                            <p>I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the rules of the Mighty Ducks Hockey League (MDHL). In recognizing the possibility of physical injury associated with hockey and in consideration for the "League" accepting the registrant for its hockey programs and activities, I hereby release, discharge, and/or otherwise indemnify MDHL, their employees and associated personnel and volunteers, including the facilities used for practicas and games, against any claim by or on behalf of the registrant as a result of the registrant's participation in the programand/orbeing transportad to or from MDHL sponsored activities, which transportation.</p>
+                            <p>By signing below, I hereby agree and authorize the above. In addition, by signing below, I also acknowledge that I have read the cancellation policy and agree to its terms.</p>
+                        </div>
+
+                    </label>
+
+                    <div class="col-2">
+                        <div class="field">
+                            <label for="parent-signature">Parent's Signature</label>
+                            <input type="text" id="parent-signature">
+                        </div>
+                        <div class="field">
+                            <label for="signature-date">date (mm/dd/yyyy)</label>
+                            <input type="date" id="signature-date">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

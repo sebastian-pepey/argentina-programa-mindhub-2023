@@ -8,7 +8,7 @@
     --nav-hover: rgb(176, 176, 176)
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -25,7 +25,7 @@ h3 {
     line-height: 8rem;
 }
 
-p, ol, th, td {
+p, ol, th, td, form {
     font-size: 3rem;
     line-height: 4rem;
 }
@@ -55,8 +55,8 @@ header{
 header > img {
     height: 800px;
     position: relative; /* Para ajustar el icono a mi gusto */
-    top: 150px;
-    left: 20%;
+    top: 170px;
+    right: -10%;
 }
 
 header > h1 {
@@ -157,7 +157,6 @@ figure > img {
 
 table {
     margin: 20px auto;
-
 }
 
 table, th, td {
@@ -176,5 +175,107 @@ th {
     text-align: center;
 }
 
+form {
+    width: max(60%,800px);
+    margin: 20px auto;
+    background-color: var(--letra-claro);
+    border: 1px solid var(--nav-oscuro);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px var(--nav-oscuro);
+}
+
+#form-container {
+    background-color: var(--nav-hover);
+    overflow: auto;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+}
+
+input[type='text'] {
+    padding-left: 10px;
+}
+
+.col-1, .col-2 {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+input[type='radio'], input[type='checkbox'] {
+    appearance: none;
+    background: var(--letra-claro);
+    outline: 1px solid var(--letra-oscuro);
+    border: 2px solid var(--letra-claro);
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+}
+  
+input[type='radio']:checked, input[type='checkbox']:checked {
+    background: var(--letra-oscuro);
+}
+
+fieldset {
+    border-radius: 10px;
+}
+
+legend {
+    font-size: 2rem;
+}
+
+.col-1 .field {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.col-2 .field {
+    width: 50%;
+    padding: 0 20px;
+} 
+
+.label-text, label {
+    font-size: 2rem;
+}
+
+.label-text {
+    display: block;
+    text-align: left;
+    line-height: 1.5rem;
+    padding: 0;
+}
+
+.field div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.superscript {
+    vertical-align: super;
+}
 
 
+
+#show-conditions {
+    font-weight: bold;
+    pointer-events: auto;
+}
+
+#hidden-conditions {
+    max-height: 0;
+    transition: max-height 1s;
+    overflow: hidden;
+}
+
+#hidden-conditions p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+#show-conditions:hover + #hidden-conditions {
+    max-height: 400px;
+}
