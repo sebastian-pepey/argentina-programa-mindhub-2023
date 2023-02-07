@@ -20,276 +20,590 @@ html {
     font-size: 62.5%;
 }
 
-h3 {
-    font-size: 4rem;
-    line-height: 8rem;
+@media only screen and (max-width: 767px){
+    h3 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    
+    p, ol, th, td, form {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    
+    p {
+        text-align: justify;
+    }
+    
+    ol, p, h3 {
+        padding:0 5vw;
+    }
+    
+    tr {
+        padding-left: 0;  
+    }
+    
+    header{
+        background-image: url('./../images/Logo_Mighty_ducks-01.png'),linear-gradient(to right,var(--color-01), var(--color-02));
+        background-position: 50% -80px;
+        width: 100%;
+        height: 170px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    header > h1 {
+        font-size: 3.5rem;
+        color: var(--nav-oscuro);
+        background-color: #ffffffb6;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+
+    }
+    
+    .main-title-01{
+        background-image: url('./../images/custom_hockey_01.jpeg');
+        background-position: 0% 70%;
+        background-size: cover;
+        font-size: 30px;
+        width: 100%;
+        height: 125px;
+        margin: 8px auto;
+        padding-top: 78px;
+        color: var(--letra-claro);
+        line-height: 4rem;
+    }
+    
+    .main-title-02{
+        background-image: url('./../images/custom_hockey_02.jpg');
+        background-position: 0% 55%;
+    }
+    
+    .main-title-03{
+        background-image: url('./../images/custom_hockey_03.jpg');
+        background-position: 0% 15%;
+    }
+    
+    .main-title-04{
+        background-image: url('./../images/custom_hockey_04.jpg');
+        background-position: 0% 15%;
+    }
+    
+    .main-title-05{
+        background-image: url('./../images/custom_hockey_05.jpg');
+        background-position: 0% 9%;
+    }
+    
+    nav {
+        background: var(--nav-oscuro);
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        gap: 1px;
+    }
+    
+    nav > a {
+        color: var(--letra-claro);
+        font-size: 15px;
+        text-decoration: none;
+        padding: 5px;
+    }
+    
+    nav > a:hover  {
+        background-color: var(--nav-hover);
+        color: var(--letra-oscuro);
+    }
+
+    article {
+        width: 100%;
+    }
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    section article > *, .not-article {
+        margin: 5px;
+    }
+
+    section article > h3 {
+        background-color: var(--nav-hover);
+        line-height: 3rem;
+    }
+    
+    section article > p , section article > ol {
+        max-height: 0px;
+        transition: max-height 1s;
+        overflow: hidden;
+        background-color: var(--nav-oscuro);
+        color: var(--letra-claro);
+    }
+    
+    section article > h3:hover {
+        background-color: var(--letra-claro);
+    }
+    
+    section article > h3:hover + p , section article > h3:hover + ol {
+        max-height: 400px;
+    }
+    
+    figure > img, header > img {
+        display: none;
+    }
+    
+    table {
+        margin: 20px auto;
+    }
+    
+    table, th, td {
+        border: 1px solid var(--nav-oscuro);
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+    
+    th {
+        background-color: var(--nav-hover);
+    }
+    
+    .centered-text {
+        text-align: center;
+    }
+    
+    form {
+        width: max(60%,800px);
+        margin: 20px auto;
+        background-color: var(--letra-claro);
+        border: 1px solid var(--nav-oscuro);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px var(--nav-oscuro);
+    }
+    
+    #form-container {
+        background-color: var(--nav-hover);
+        overflow: auto;
+    }
+    
+    input {
+        width: 100%;
+        height: 30px;
+    }
+    
+    input[type='text'] {
+        padding-left: 10px;
+    }
+    
+    .col-1, .col-2 {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+    
+    input[type='radio'], input[type='checkbox'] {
+        appearance: none;
+        background: var(--letra-claro);
+        outline: 1px solid var(--letra-oscuro);
+        border: 2px solid var(--letra-claro);
+        width: 10px;
+        height: 10px;
+        margin: 0 10px;
+    }
+      
+    input[type='radio']:checked, input[type='checkbox']:checked {
+        background: var(--letra-oscuro);
+    }
+    
+    fieldset {
+        border-radius: 10px;
+    }
+    
+    legend {
+        font-size: 2rem;
+    }
+    
+    .col-1 .field {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .col-2 .field {
+        width: 50%;
+        padding: 0 20px;
+    } 
+    
+    .label-text, label {
+        font-size: 2rem;
+    }
+    
+    .label-text {
+        display: block;
+        text-align: left;
+        line-height: 1.5rem;
+        padding: 0;
+    }
+    
+    p.label-text {
+        padding-left: 20px;
+    }
+    
+    .input-item {
+        flex-direction: column;
+    }
+    
+    .field div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .superscript {
+        vertical-align: super;
+    }
+    
+    #show-conditions {
+        font-weight: bold;
+    }
+    
+    #hidden-conditions p {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+      }
+    
+      .overlay:target {
+        visibility: visible;
+        opacity: 1;
+      }
+    
+      .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 30%;
+        position: relative;
+        transition: all 5s ease-in-out;
+      }
+    
+      iframe {
+        width:300px;
+        height:200px;
+        border:0;
+      }
+
 }
 
-p, ol, th, td, form {
-    font-size: 3rem;
-    line-height: 4rem;
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
 }
 
-p {
-    text-align: justify;
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+    h3 {
+        font-size: 4rem;
+        line-height: 8rem;
+    }
+    
+    p, ol, th, td, form {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    
+    p {
+        text-align: justify;
+    }
+    
+    ol, p, h3 {
+        padding:0 5vw;
+    }
+    
+    tr {
+        padding-left: 0;  
+    }
+    
+    header{
+        background: linear-gradient(to right,var(--color-01), var(--color-02));
+        width: 100%;
+        height: 170px;
+        overflow: hidden;
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+    
+    header > img {
+        height: 800px;
+        position: relative; /* Para ajustar el icono a mi gusto */
+        top: 170px;
+        right: -10%;
+    }
+    
+    header > h1 {
+        font-size: 5rem;
+        color: var(--color-letra);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .main-title-01{
+        background-image: url('./../images/custom_hockey_01.jpeg');
+        background-position: 0% 70%;
+        background-size: cover;
+        font-size: 40px;
+        width: 100%;
+        height: 125px;
+        margin: 8px auto;
+        padding-top: 78px;
+        color: var(--letra-claro);
+        line-height: 4rem;
+    }
+    
+    .main-title-02{
+        background-image: url('./../images/custom_hockey_02.jpg');
+        background-position: 0% 55%;
+    }
+    
+    .main-title-03{
+        background-image: url('./../images/custom_hockey_03.jpg');
+        background-position: 0% 15%;
+    }
+    
+    .main-title-04{
+        background-image: url('./../images/custom_hockey_04.jpg');
+        background-position: 0% 15%;
+    }
+    
+    .main-title-05{
+        background-image: url('./../images/custom_hockey_05.jpg');
+        background-position: 0% 9%;
+    }
+    
+    nav {
+        background: linear-gradient(to left,var(--nav-oscuro), var(--letra-claro));
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 5px;
+    }
+    
+    nav > a {
+        color: var(--letra-claro);
+        font-size: 30px;
+        text-decoration: none;
+        padding: 5px 15px;
+    }
+    
+    nav > a:hover  {
+        background-color: var(--nav-hover);
+        color: var(--letra-oscuro);
+    }
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    section article > *, .not-article {
+        margin: 10px 0 0 100px;
+        width: 70vw;
+    }
+    
+    section article > h3 {
+        background-color: var(--nav-hover);
+        line-height: 6rem;
+    }
+    
+    section article > p , section article > ol {
+        max-height: 0px;
+        transition: max-height 1s;
+        overflow: hidden;
+        background-color: var(--nav-oscuro);
+        color: var(--letra-claro);
+    }
+    
+    section article > h3:hover {
+        background-color: var(--letra-claro);
+    }
+    
+    section article > h3:hover + p , section article > h3:hover + ol {
+        max-height: 400px;
+    }
+    
+    figure > img {
+        display: none;
+    }
+    
+    table {
+        margin: 20px auto;
+    }
+    
+    table, th, td {
+        border: 1px solid var(--nav-oscuro);
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+    
+    th {
+        background-color: var(--nav-hover);
+    }
+    
+    .centered-text {
+        text-align: center;
+    }
+    
+    form {
+        width: max(60%,800px);
+        margin: 20px auto;
+        background-color: var(--letra-claro);
+        border: 1px solid var(--nav-oscuro);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px var(--nav-oscuro);
+    }
+    
+    #form-container {
+        background-color: var(--nav-hover);
+        overflow: auto;
+    }
+    
+    input {
+        width: 100%;
+        height: 30px;
+    }
+    
+    input[type='text'] {
+        padding-left: 10px;
+    }
+    
+    .col-1, .col-2 {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+    
+    input[type='radio'], input[type='checkbox'] {
+        appearance: none;
+        background: var(--letra-claro);
+        outline: 1px solid var(--letra-oscuro);
+        border: 2px solid var(--letra-claro);
+        width: 10px;
+        height: 10px;
+        margin: 0 10px;
+    }
+      
+    input[type='radio']:checked, input[type='checkbox']:checked {
+        background: var(--letra-oscuro);
+    }
+    
+    fieldset {
+        border-radius: 10px;
+    }
+    
+    legend {
+        font-size: 2rem;
+    }
+    
+    .col-1 .field {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .col-2 .field {
+        width: 50%;
+        padding: 0 20px;
+    } 
+    
+    .label-text, label {
+        font-size: 2rem;
+    }
+    
+    .label-text {
+        display: block;
+        text-align: left;
+        line-height: 1.5rem;
+        padding: 0;
+    }
+    
+    p.label-text {
+        padding-left: 20px;
+    }
+    
+    .input-item {
+        flex-direction: column;
+    }
+    
+    .field div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .superscript {
+        vertical-align: super;
+    }
+    
+    #show-conditions {
+        font-weight: bold;
+    }
+    
+    #hidden-conditions p {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+      }
+    
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 30%;
+        position: relative;
+        transition: all 5s ease-in-out;
+    }
+
+    iframe {
+        width:300px;
+        height:200px;
+        border:0;
+    }
+
 }
-
-ol, p, h3 {
-    padding:0 5vw;
-}
-
-tr {
-    padding-left: 0;  
-}
-
-header{
-    background: linear-gradient(to right,var(--color-01), var(--color-02));
-    width: 100%;
-    height: 170px;
-    overflow: hidden;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-}
-
-header > img {
-    height: 800px;
-    position: relative; /* Para ajustar el icono a mi gusto */
-    top: 170px;
-    right: -10%;
-}
-
-header > h1 {
-    font-size: 5rem;
-    color: var(--color-letra);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.main-title-01{
-    background-image: url('./../images/custom_hockey_01.jpeg');
-    background-position: 0% 70%;
-    background-size: cover;
-    font-size: 40px;
-    width: 100%;
-    height: 125px;
-    margin: 8px auto;
-    padding-top: 78px;
-    color: var(--letra-claro);
-    line-height: 4rem;
-}
-
-.main-title-02{
-    background-image: url('./../images/custom_hockey_02.jpg');
-    background-position: 0% 55%;
-}
-
-.main-title-03{
-    background-image: url('./../images/custom_hockey_03.jpg');
-    background-position: 0% 15%;
-}
-
-.main-title-04{
-    background-image: url('./../images/custom_hockey_04.jpg');
-    background-position: 0% 15%;
-}
-
-.main-title-05{
-    background-image: url('./../images/custom_hockey_05.jpg');
-    background-position: 0% 9%;
-}
-
-nav {
-    background: linear-gradient(to left,var(--nav-oscuro), var(--letra-claro));
-    margin-top: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 5px;
-}
-
-nav > a {
-    color: var(--letra-claro);
-    font-size: 30px;
-    text-decoration: none;
-    padding: 5px 15px;
-}
-
-nav > a:hover  {
-    background-color: var(--nav-hover);
-    color: var(--letra-oscuro);
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-section article > *, .not-article {
-    margin: 10px 0 0 100px;
-    width: 70vw;
-}
-
-section article > h3 {
-    background-color: var(--nav-hover);
-    line-height: 6rem;
-}
-
-section article > p , section article > ol {
-    max-height: 0px;
-    transition: max-height 1s;
-    overflow: hidden;
-    background-color: var(--nav-oscuro);
-    color: var(--letra-claro);
-}
-
-section article > h3:hover {
-    background-color: var(--letra-claro);
-}
-
-section article > h3:hover + p , section article > h3:hover + ol {
-    max-height: 400px;
-}
-
-figure > img {
-    display: none;
-}
-
-table {
-    margin: 20px auto;
-}
-
-table, th, td {
-    border: 1px solid var(--nav-oscuro);
-}
-
-th, td {
-    padding: 10px;
-}
-
-th {
-    background-color: var(--nav-hover);
-}
-
-.centered-text {
-    text-align: center;
-}
-
-form {
-    width: max(60%,800px);
-    margin: 20px auto;
-    background-color: var(--letra-claro);
-    border: 1px solid var(--nav-oscuro);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px var(--nav-oscuro);
-}
-
-#form-container {
-    background-color: var(--nav-hover);
-    overflow: auto;
-}
-
-input {
-    width: 100%;
-    height: 30px;
-}
-
-input[type='text'] {
-    padding-left: 10px;
-}
-
-.col-1, .col-2 {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
-
-input[type='radio'], input[type='checkbox'] {
-    appearance: none;
-    background: var(--letra-claro);
-    outline: 1px solid var(--letra-oscuro);
-    border: 2px solid var(--letra-claro);
-    width: 10px;
-    height: 10px;
-    margin: 0 10px;
-}
-  
-input[type='radio']:checked, input[type='checkbox']:checked {
-    background: var(--letra-oscuro);
-}
-
-fieldset {
-    border-radius: 10px;
-}
-
-legend {
-    font-size: 2rem;
-}
-
-.col-1 .field {
-    width: 100%;
-    padding: 0 20px;
-}
-
-.col-2 .field {
-    width: 50%;
-    padding: 0 20px;
-} 
-
-.label-text, label {
-    font-size: 2rem;
-}
-
-.label-text {
-    display: block;
-    text-align: left;
-    line-height: 1.5rem;
-    padding: 0;
-}
-
-.field div {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.superscript {
-    vertical-align: super;
-}
-
-#show-conditions {
-    font-weight: bold;
-}
-
-#hidden-conditions p {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 30%;
-    position: relative;
-    transition: all 5s ease-in-out;
-  }
