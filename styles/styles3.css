@@ -352,7 +352,7 @@ iframe {
         color: var(--nav-oscuro);
         background-color: var(--transparencia-02);
         text-align: center;
-        margin-top: 40px;
+        width: 100vw;;
     }
 
     header > img {
